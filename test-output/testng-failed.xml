@@ -6,11 +6,8 @@
       <class name="WeRPlayAssignemnts.Task1">
         <methods>
           <include name="setuptest"/>
-          <include name="EmailVerification"/>
           <include name="Checkout"/>
           <include name="invokeScreenshotMethod"/>
-          <include name="FieldVerification"/>
-          <include name="CartTask"/>
         </methods>
       </class> <!-- WeRPlayAssignemnts.Task1 -->
     </classes>

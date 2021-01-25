@@ -27,7 +27,7 @@ import org.testng.annotations.Test;
 public class Task1 {
 	
 	WebDriver driver = null;
-	String Email = "test8@assijgnemnt.com";
+	String Email = "test14@assignemnt.com";
 	
 	String RegURL = "https://www.ounass.ae/customer/register";
 	String ArabicRegURL = "https://ar.ounass.ae/customer/register";
@@ -36,8 +36,8 @@ public class Task1 {
 	String ArabicCusURL = "https://ar.ounass.ae/customer";
 	
 	
-	String HomeURL = "https://www.ounass.ae";
-	String ArabicHomeURL = "https://ar.ounass.ae/men"; //In Arabic Version category is selecting by default
+	String CatURL = "https://www.ounass.ae/men";
+	String ArabiCcatURL = "https://ar.ounass.ae/men"; 
 	
 	
 	
@@ -88,8 +88,8 @@ public class Task1 {
 	@Test(priority=1)
 	public void EmailVerification() throws InterruptedException
 	{
-		Thread.sleep(5000);
-		driver.get("CusURL");
+		
+		driver.get(CusURL);
 		Thread.sleep(5000);
 		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[3]/div[2]/div[2]/div[4]/a")).click();
 		Thread.sleep(5000);
@@ -113,12 +113,12 @@ public void FieldVerification()
 	
 	{
 		
-		driver.get(HomeURL);
+		driver.get(CatURL);
 		driver.manage().window().maximize();
 		Thread.sleep(5000);
 		//driver.findElement(By.id("onesignal-slidedown-cancel-button")).click();
 		//Selecting Category
-		driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[4]/div[1]/a[2]/div/span")).click();
+		//driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div[4]/div[1]/a[2]/div/span")).click();
 		
 		
 		//Opening First Product
@@ -207,7 +207,7 @@ public void FieldVerification()
 		//driver.findElement(By.id("lastName")).sendKeys("Haider");
 		//driver.findElement(By.id("email")).sendKeys(Email);
 		driver.findElement(By.id("mobileNumber")).sendKeys("67324238");
-		WebElement selectstate = driver.findElement(By.xpath("/html/body/div[1]/div/div[1]/div/div[3]/div[1]/form/section[1]/label[6]/div[1]/div"));
+		WebElement selectstate = driver.findElement(By.xpath("//*[@id=\"root\"]/div/div[1]/div/div[3]/div[1]/form/section[1]/label[5]/div"));
 		selectstate.click();
 		Thread.sleep(4000);
 		Actions keyDown1 = new Actions(driver); keyDown1.sendKeys(Keys.chord(Keys.DOWN, Keys.DOWN, Keys.ENTER)).perform();
